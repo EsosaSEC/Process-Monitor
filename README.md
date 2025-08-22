@@ -1,5 +1,5 @@
-Process Monitor
- A standalone bash script to detect suspicious processes (e.g., `nc`, `curl`, `xmrig`) that may indicate malware or unauthorized activity.
+# Process Monitor
+A standalone bash script to detect suspicious processes (e.g., `nc`, `curl`, `xmrig`) that may indicate malware or unauthorized activity.
 
  ## Usage
  1. Run:
