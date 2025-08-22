@@ -1,19 +1,25 @@
-# Process Monitor
+Process Monitor
+ A standalone bash script to detect suspicious processes (e.g., `nc`, `curl`, `xmrig`) that may indicate malware or unauthorized activity.
 
-A bash script to detect suspicious processes (e.g., `nc`, `miner`, `curl`, `xmrig`, `python.*http`) that may indicate malware or backdoors. Alerts are logged to a specified file.
+ ## Usage
+ 1. Run:
+    ```bash
+    sudo ./process_monitor.sh
+    ```
+ 2. Check alerts in `./alerts/alerts.log`.
 
-## Usage
-1. Ensure `config.sh` with `ALERTS_LOG`.
-2. Run:
-   ```bash
-   sudo ./process_monitor.sh
-   ```
-3. Check alerts in the log file.
+ ## Dependencies
+ - `ps`, `grep` (standard on Linux).
 
-## Dependencies
-- ps, grep.
+ ## Example Alert
+ ```
+ [2025-08-21 22:02:00] ALERT: Suspicious process detected: user 12345 0.0 0.1 1234 5678 pts/0 S 22:00 0:00 nc -l 12345
+ ```
 
-## Example Alert
-```bash
-[2025-07-11 11:17:00] ALERT: Suspicious process detected: user 1234 nc -l 445
-```
+ ## Notes
+ - Fully standalone with no external configuration dependencies.
+ - Line-by-line comments for clarity.
+ - Tested in a lab with simulated suspicious processes.
+ 
+ ## Author
+ Esosa Okonedo
